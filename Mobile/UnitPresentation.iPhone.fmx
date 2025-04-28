@@ -1,0 +1,78 @@
+inherited FrmPresentation_iPhone: TFrmPresentation_iPhone
+  ClientHeight = 460
+  ClientWidth = 320
+  DesignerMasterStyle = 3
+  inherited Lay_Top: TLayout
+    Size.Width = 310.000000000000000000
+    TabOrder = 6
+    inherited Img_Exit: TGlyph
+      Margins.Left = 5.000000000000000000
+      Position.X = 5.000000000000000000
+    end
+    inherited lbl_Last: TLabel
+      Position.X = 31.073982238769530000
+      Size.Width = 136.873382568359400000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+    end
+    inherited lbl_Next: TLabel
+      Position.X = 165.727905273437500000
+      Size.Width = 144.272338867187500000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+    end
+  end
+  inherited Lay_Content: TLayout
+    Size.Width = 310.000000000000000000
+    Size.Height = 375.000000000000000000
+    inherited Rect_Horz_Content: TRectangle
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 375.000000000000000000
+      inherited lbWord: TLabel
+        Size.Height = 48.000000000000000000
+        inherited Rect_Word: TRectangle
+          Size.Height = 48.000000000000000000
+        end
+      end
+      inherited lbl_Translation: TLabel
+        Size.Height = 48.000000000000000000
+        inherited Rect_Transaction: TRectangle
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+  end
+  inherited Lay_Bottom: TLayout
+    Position.Y = 415.000000000000000000
+    Size.Width = 310.000000000000000000
+    inherited cbbLanguage: TComboBox
+      Size.Height = 30.000000000000000000
+    end
+    inherited Img_Play: TSkAnimatedImage
+      Position.X = 222.000000000000000000
+    end
+    inherited Img_Random: TGlyph
+      Padding.Right = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 265.000000000000000000
+      inherited Rect_Random: TRectangle
+        Size.Width = 35.000000000000000000
+      end
+    end
+  end
+  inherited GestureManager: TGestureManager
+    GestureData = <
+      item
+        Control = Rect_Horz_Content
+        Collection = <
+          item
+            Action = actNext
+            GestureID = sgiLeft
+          end
+          item
+            Action = actLast
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end

@@ -1,0 +1,66 @@
+inherited FrmPresentation_XLgXhdpiTb: TFrmPresentation_XLgXhdpiTb
+  ClientHeight = 1256
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Lay_Top: TLayout
+    Size.Width = 790.000000000000000000
+    TabOrder = 6
+    inherited Img_Exit: TGlyph
+      Margins.Left = 5.000000000000000000
+      Position.X = 5.000000000000000000
+    end
+    inherited lbl_Last: TLabel
+      Position.X = 79.188537597656250000
+      Size.Width = 348.806335449218800000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+    end
+    inherited lbl_Next: TLabel
+      Position.X = 422.338897705078100000
+      Size.Width = 367.661712646484400000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+    end
+  end
+  inherited Lay_Content: TLayout
+    Size.Width = 790.000000000000000000
+    Size.Height = 1171.000000000000000000
+    inherited Rect_Horz_Content: TRectangle
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Size.Width = 780.000000000000000000
+      Size.Height = 1171.000000000000000000
+    end
+  end
+  inherited Lay_Bottom: TLayout
+    Position.Y = 1211.000000000000000000
+    Size.Width = 790.000000000000000000
+    inherited cbbLanguage: TComboBox
+      Size.Height = 30.000000000000000000
+    end
+    inherited Img_Play: TSkAnimatedImage
+      Position.X = 702.000000000000000000
+    end
+    inherited Img_Random: TGlyph
+      Padding.Right = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 745.000000000000000000
+      inherited Rect_Random: TRectangle
+        Size.Width = 35.000000000000000000
+      end
+    end
+  end
+  inherited GestureManager: TGestureManager
+    GestureData = <
+      item
+        Control = Rect_Horz_Content
+        Collection = <
+          item
+            Action = actNext
+            GestureID = sgiLeft
+          end
+          item
+            Action = actLast
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
