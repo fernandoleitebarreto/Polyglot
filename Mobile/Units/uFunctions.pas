@@ -424,9 +424,7 @@ end;
 class function TFunctions.getPathAudio: string;
 begin
 {$IFDEF MSWINDOWS}
-  // Result := GetCurrentDir;
-  // Result := TPath.Combine(GetCurrentDir, 'Audio');
-  Result := 'D:\Sistemas\Delphi\Apps\Polyglot\Audio';
+  Result := TPath.Combine(GetCurrentDir, 'Audio');
 {$ELSE}
   Result := TPath.GetDocumentsPath;
 {$ENDIF}
@@ -445,7 +443,7 @@ end;
 class function TFunctions.getPathS3: string;
 begin
 {$IFDEF MSWINDOWS}
-  Result := 'D:\Sistemas\Delphi\Apps\Polyglot';
+  Result := GetCurrentDir;
 {$ELSE}
   Result := 'https://polyglot.s3.us-west-004.backblazeb2.com/';
 {$ENDIF}
