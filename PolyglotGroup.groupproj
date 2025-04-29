@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{94118239-BD59-4DA1-A463-79EB832880C4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Servidor\Servidor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mobile\Polyglot.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Servidor">
+        <MSBuild Projects="Servidor\Servidor.dproj"/>
+    </Target>
+    <Target Name="Servidor:Clean">
+        <MSBuild Projects="Servidor\Servidor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Servidor:Make">
+        <MSBuild Projects="Servidor\Servidor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Polyglot">
+        <MSBuild Projects="Mobile\Polyglot.dproj"/>
+    </Target>
+    <Target Name="Polyglot:Clean">
+        <MSBuild Projects="Mobile\Polyglot.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Polyglot:Make">
+        <MSBuild Projects="Mobile\Polyglot.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Servidor;Polyglot"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Servidor:Clean;Polyglot:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Servidor:Make;Polyglot:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
