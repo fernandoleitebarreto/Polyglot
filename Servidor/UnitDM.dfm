@@ -7,22 +7,11 @@ object dm: Tdm
     IgnoreInvalidParams = False
     Events = <
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'hora'
         EventName = 'hora'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -31,22 +20,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventshoraReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'Configuracao'
         EventName = 'Configuracao'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -55,20 +33,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsConfiguracaoReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -92,6 +58,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'ValidaLogin'
         EventName = 'ValidaLogin'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -100,20 +67,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsValidaLoginReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -144,6 +99,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'CriarConta'
         EventName = 'CriarConta'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -152,22 +108,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsCriarContaReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'ListarCategoria'
         EventName = 'ListarCategoria'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -176,20 +121,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsListarCategoriaReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -199,6 +132,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'ListarRanking'
         EventName = 'ListarRanking'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -207,20 +141,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsListarRankingReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -230,6 +152,7 @@ object dm: Tdm
             Encoded = True
           end>
         DataMode = dmRAW
+        Name = 'CarregaDados'
         EventName = 'CarregaDados'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -238,20 +161,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsCarregaDadosReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -275,6 +186,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'Search'
         EventName = 'Search'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -283,20 +195,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSearchReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -313,6 +213,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'SendEmailRecoverPassword'
         EventName = 'SendEmailRecoverPassword'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -321,20 +222,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSendEmailRecoverPasswordReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -351,6 +240,7 @@ object dm: Tdm
             Encoded = True
           end>
         DataMode = dmRAW
+        Name = 'SendEmailCreateAccount'
         EventName = 'SendEmailCreateAccount'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -359,20 +249,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSendEmailCreateAccountReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -389,6 +267,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'SendSMSRecoverPassword'
         EventName = 'SendSMSRecoverPassword'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -397,20 +276,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSendSMSRecoverPasswordReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -427,6 +294,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'SendSMSCreateAccount'
         EventName = 'SendSMSCreateAccount'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -435,20 +303,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSendSMSCreateAccountReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -493,6 +349,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'VerifyCode'
         EventName = 'VerifyCode'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -501,20 +358,8 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsVerifyCodeReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -538,6 +383,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'SaveNewPassword'
         EventName = 'SaveNewPassword'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -546,22 +392,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsSaveNewPasswordReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'AddWord'
         EventName = 'AddWord'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -570,22 +405,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsAddWordReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'AddAudio'
         EventName = 'AddAudio'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -594,22 +418,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsAddAudioReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'WordsWithNoAudio'
         EventName = 'WordsWithNoAudio'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -618,22 +431,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsWordsWithNoAudioReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'MeaningProximo'
         EventName = 'MeaningProximo'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -642,22 +444,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsMeaningProximoReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'SetNativeLanguage'
         EventName = 'SetNativeLanguage'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -666,22 +457,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsSetNativeLanguageReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'GetNativeLanguage'
         EventName = 'GetNativeLanguage'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -690,22 +470,11 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsGetNativeLanguageReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'LoginFacebook'
         EventName = 'LoginFacebook'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -714,22 +483,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsLoginFacebookReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'RandomDados'
         EventName = 'RandomDados'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -738,20 +496,8 @@ object dm: Tdm
         OnReplyEventByType = DWEventsEventsRandomDadosReplyEventByType
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <
           item
             TypeObject = toParam
@@ -782,6 +528,7 @@ object dm: Tdm
             Encoded = False
           end>
         DataMode = dmRAW
+        Name = 'UpdateUser'
         EventName = 'UpdateUser'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -790,22 +537,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsUpdateUserReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'DeleteAccount'
         EventName = 'DeleteAccount'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -814,22 +550,11 @@ object dm: Tdm
         OnReplyEvent = DWEventsEventsDeleteAccountReplyEvent
       end
       item
-        Routes.All.Active = True
-        Routes.All.NeedAuthorization = False
-        Routes.Get.Active = False
-        Routes.Get.NeedAuthorization = False
-        Routes.Post.Active = False
-        Routes.Post.NeedAuthorization = False
-        Routes.Put.Active = False
-        Routes.Put.NeedAuthorization = False
-        Routes.Patch.Active = False
-        Routes.Patch.NeedAuthorization = False
-        Routes.Delete.Active = False
-        Routes.Delete.NeedAuthorization = False
-        Routes.Option.Active = False
-        Routes.Option.NeedAuthorization = False
+        Routes = [crAll]
+        NeedAuthorization = True
         Params = <>
         DataMode = dmRAW
+        Name = 'ListarParametro'
         EventName = 'ListarParametro'
         BaseURL = '/'
         DefaultContentType = 'application/json'
@@ -883,19 +608,18 @@ object dm: Tdm
     RequestTimeout = -1
     ServicePort = 8082
     ProxyOptions.ProxyPort = 8888
+    AuthenticationOptions.AuthorizationOption = rdwAONone
     Encoding = esUtf8
     RootPath = '/'
     ForceWelcomeAccess = False
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
     EncodeErrors = False
-    ServerIPVersionConfig.IPv4Address = '0.0.0.0'
-    ServerIPVersionConfig.IPv6Address = '::'
+    SSLVersions = []
     SSLVerifyMode = []
     SSLVerifyDepth = 0
     SSLMode = sslmUnassigned
     SSLMethod = sslvSSLv2
-    SSLVersions = []
     Left = 136
     Top = 96
   end

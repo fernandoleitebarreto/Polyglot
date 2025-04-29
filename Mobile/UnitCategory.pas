@@ -11,7 +11,7 @@ uses
   FMX.TabControl, FMX.Edit, FMX.Layouts, System.JSON, System.NetEncoding,
   uFunctions, uClassMeaning.Intf, uClassCategory, uClassCategory.Intf,
   uClassTexts, uClassUser, uClassCountry, FMX.ImgList, uEnum, uEnum.Helper,
-  Soap.EncdDecd, UnitPadrao, System.ImageList, FMX.Skia, FMX.Effects, uCircle,
+  Soap.EncdDecd, UnitPadrao, System.ImageList, Skia.FMX, FMX.Effects, uCircle,
   Skia;
 
 type

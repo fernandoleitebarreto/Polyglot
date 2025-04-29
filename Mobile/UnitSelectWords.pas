@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.Client, UnitDM, System.JSON, uFunctions, UnitPadrao,
   System.Generics.Collections, System.Generics.Defaults, Data.DB, uArrayUtils,
   UnitMeaning, uClassTexts, FMX.Media, System.IOUtils, uMediaPlayerThread,
-  FMX.ListBox, System.ImageList, FMX.ImgList, FMX.Skia, FMX.TabControl,
+  FMX.ListBox, System.ImageList, FMX.ImgList, Skia.FMX, FMX.TabControl,
   uHorizontalMeaning, System.Actions, FMX.ActnList, Skia;
 
 const

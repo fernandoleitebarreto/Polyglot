@@ -4,7 +4,7 @@ interface
 
 uses FMX.Layouts, FMX.Objects, FMX.Types, FMX.Graphics, System.UITypes,
   System.Classes, System.Types, System.SysUtils, FMX.Forms, FMX.StdCtrls,
-  FMX.Ani, System.Actions, FMX.ActnList, FMX.Edit, System.JSON, FMX.Skia,
+  FMX.Ani, System.Actions, FMX.ActnList, FMX.Edit, System.JSON, Skia.FMX,
   System.Generics.Collections, FMX.TabControl, FMX.ImgList, System.ImageList,
   System.Net.HttpClient, FMX.Dialogs, IdHTTP, uClassMeaning.Intf, uEnum,
   System.IOUtils, FMX.Media, uEnum.Helper, uMediaPlayerThread, UnitConstante;

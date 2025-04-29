@@ -13,7 +13,7 @@ uses
   Data.Bind.ObjectScope, FMX.TabControl, FMX.Advertising, uClassTexts,
   System.IOUtils, FMX.Gestures, System.ImageList, FMX.ImgList, System.Actions,
   FMX.ActnList, System.Sensors, System.Sensors.Components,
-  uHorizontalMeaning, UnitPadrao, FMX.Skia, Skia;
+  uHorizontalMeaning, UnitPadrao, Skia.FMX, Skia;
 
 type
   TNotifyEvent = procedure(Sender: TObject) of object;

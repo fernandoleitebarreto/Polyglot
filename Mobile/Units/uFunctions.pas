@@ -7,7 +7,7 @@ uses
   System.Types, System.UITypes, System.Classes, System.Zip,
   System.Variants, FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox, FMX.Ani, FMX.Gestures, IdURI, Data.Cloud.CloudAPI,
-  Data.Cloud.AmazonAPI, Soap.EncdDecd, Skia, FMX.Skia,
+  Data.Cloud.AmazonAPI, Soap.EncdDecd, Skia, Skia.FMX,
 {$IFDEF ANDROID}
   AndroidApi.JNI.JavaTypes, AndroidApi.JNI.Telephony, AndroidApi.JNIBridge,
   AndroidApi.JNI.GraphicsContentViewText, AndroidApi.JNI.Net, AndroidApi.JNI.Os,

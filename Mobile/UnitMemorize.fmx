@@ -1,8 +1,8 @@
 inherited FrmMemorize: TFrmMemorize
   BorderStyle = Single
   Caption = 'Jogo da Mem'#243'ria'
-  ClientHeight = 508
-  ClientWidth = 424
+  ClientHeight = 507
+  ClientWidth = 425
   Position = ScreenCenter
   OnShow = FormShow
   DesignerMasterStyle = 3
@@ -589,8 +589,8 @@ inherited FrmMemorize: TFrmMemorize
   end
   object Lay_Form: TLayout [7]
     Align = Contents
-    Size.Width = 424.000000000000000000
-    Size.Height = 508.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 507.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 6
     object AnimationForm: TFloatAnimation
@@ -605,7 +605,7 @@ inherited FrmMemorize: TFrmMemorize
       Margins.Left = 5.000000000000000000
       Margins.Right = 6.000000000000000000
       Position.X = 5.000000000000000000
-      Size.Width = 413.000000000000000000
+      Size.Width = 414.000000000000000000
       Size.Height = 81.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
@@ -615,10 +615,10 @@ inherited FrmMemorize: TFrmMemorize
         StyledSettings = [Family]
         HitTest = True
         Opacity = 0.699999988079071000
-        Position.X = 341.000000000000000000
+        Position.X = 342.000000000000000000
         Position.Y = 10.000000000000000000
-        Size.Width = 73.600006103515630000
-        Size.Height = 22.400001525878910000
+        Size.Width = 73.000000000000000000
+        Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 18.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -636,7 +636,7 @@ inherited FrmMemorize: TFrmMemorize
         Margins.Right = 5.000000000000000000
         Position.X = 5.000000000000000000
         Position.Y = 49.000000000000000000
-        Size.Width = 403.000000000000000000
+        Size.Width = 404.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
@@ -653,7 +653,7 @@ inherited FrmMemorize: TFrmMemorize
         Margins.Left = 5.000000000000000000
         Margins.Right = 5.000000000000000000
         Position.X = 5.000000000000000000
-        Size.Width = 403.000000000000000000
+        Size.Width = 404.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 18.000000000000000000
@@ -831,15 +831,15 @@ inherited FrmMemorize: TFrmMemorize
       Align = Client
       Margins.Left = 5.000000000000000000
       Margins.Right = 6.000000000000000000
-      Size.Width = 413.000000000000000000
-      Size.Height = 427.000000000000000000
+      Size.Width = 414.000000000000000000
+      Size.Height = 426.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 11
       OnMouseMove = LayoutContentMouseMove
       OnMouseUp = LayoutContentMouseUp
       object LayoutTop: TLayout
         Align = Top
-        Size.Width = 413.000000000000000000
+        Size.Width = 414.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 4
@@ -853,8 +853,8 @@ inherited FrmMemorize: TFrmMemorize
       object LayoutBottom: TLayout
         Align = Bottom
         Margins.Bottom = 5.000000000000000000
-        Position.Y = 372.000000000000000000
-        Size.Width = 413.000000000000000000
+        Position.Y = 371.000000000000000000
+        Size.Width = 414.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3

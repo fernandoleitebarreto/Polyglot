@@ -14,7 +14,7 @@ uses
   System.IOUtils, FMX.ImgList, FMX.ListBox, uClassSendCode,
   uEnum, uEnum.Helper, uClassMeaning, uClassMeaning.Intf,
   uClassTexts, uClassCountry, uOpenViewURL, FMX.InAppPurchase, UnitPadrao,
-  FMX.Skia, Skia, IdBaseComponent, IdComponent, IdTCPConnection,
+  Skia.FMX, Skia, IdBaseComponent, IdComponent, IdTCPConnection,
   IdTCPClient, IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase,
   IdSMTP;
 
@@ -302,12 +302,19 @@ begin
       end
       else
       begin
-
         dm.RESTRequestParam.ExecuteAsync(VerificaVersao, True, True,
           ErroRequestLogin);
 
       end;
 
+      {$IFDEF DEBUG}
+      TThread.Synchronize(TThread.CurrentThread,
+        procedure
+        begin
+          Edt_Email.Text := 'fernando.leitebarreto@gmail.com';
+          Edt_Password.Text := '123';
+        end);
+      {$ENDIF}
     end);
 
   t.Start;

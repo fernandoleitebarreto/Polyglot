@@ -12,7 +12,7 @@ uses
   FMX.Ani, System.Actions, FMX.ActnList,
   uEnum, uEnum.Helper, uClassMeaning, uClassMeaning.Intf,
   FMX.Media, Data.Cloud.CloudAPI, Data.Cloud.AmazonAPI, FMX.ScrollBox, FMX.Memo,
-  FMX.Memo.Types, uClassTexts, System.ImageList, FMX.ImgList, FMX.Skia, Skia;
+  FMX.Memo.Types, uClassTexts, System.ImageList, FMX.ImgList, Skia.FMX, Skia;
 
 type
   TFrmAddAudio = class(TFrmPadrao)
@@ -657,9 +657,9 @@ begin
       TPermissionStatus.Denied:
         TDialogService.ShowMessage
           ('Cannot record audio without the relevant permission being granted');
-//      TPermissionStatus.PermanentlyDenied:
-//        TDialogService.ShowMessage
-//          ('If you decide you wish to use the audio recording feature of this app, please go to app settings and enable the microphone permission');
+      TPermissionStatus.PermanentlyDenied:
+        TDialogService.ShowMessage
+          ('If you decide you wish to use the audio recording feature of this app, please go to app settings and enable the microphone permission');
     end;
   end
   else

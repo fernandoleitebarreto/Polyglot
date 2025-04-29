@@ -9,7 +9,7 @@ uses
   FMX.Controls, FMX.ListBox, FMX.Effects, FMX.Ani, FMX.Controls.Presentation,
   FMX.StdCtrls, FMX.Objects, FMX.ImgList, FMX.Layouts, System.ImageList,
   UnitMeaning, uHorizontalPresentation,
-  uClassTexts, FMX.Skia, AdMob113, System.Math, System.Generics.Collections,
+  uClassTexts, Skia.FMX, AdMob113, System.Math, System.Generics.Collections,
   FMX.Forms, Skia;
 
 type

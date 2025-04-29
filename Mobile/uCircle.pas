@@ -7,7 +7,7 @@ uses
   System.Variants, FMX.Ani, FMX.Layouts,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.ImgList,
-  System.ImageList, FMX.Effects, FMX.Filter.Effects, FMX.Skia, System.Skia;
+  System.ImageList, FMX.Effects, FMX.Filter.Effects, Skia.FMX;
 
 type
   TCircleFrame = class(TFrame)

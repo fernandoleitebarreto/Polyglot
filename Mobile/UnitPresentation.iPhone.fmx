@@ -45,9 +45,6 @@ inherited FrmPresentation_iPhone: TFrmPresentation_iPhone
   inherited Lay_Bottom: TLayout
     Position.Y = 415.000000000000000000
     Size.Width = 310.000000000000000000
-    inherited cbbLanguage: TComboBox
-      Size.Height = 30.000000000000000000
-    end
     inherited Img_Play: TSkAnimatedImage
       Position.X = 222.000000000000000000
     end

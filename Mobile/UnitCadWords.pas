@@ -12,7 +12,7 @@ uses
   Data.Cloud.AmazonAPI, FMX.Ani, System.Actions, FMX.ActnList, uEnum,
   uEnum.Helper,
   uClassMeaning, uClassMeaning.Intf, FMX.Media, uClassTexts, UnitPadrao,
-  System.ImageList, FMX.ImgList, FMX.Skia, FMX.ListView.Types,
+  System.ImageList, FMX.ImgList, Skia.FMX, FMX.ListView.Types,
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, Skia;
 
 type
@@ -731,9 +731,9 @@ begin
       TPermissionStatus.Denied:
         TDialogService.ShowMessage
           ('Cannot record audio without the relevant permission being granted');
-//      TPermissionStatus.PermanentlyDenied:
-//        TDialogService.ShowMessage
-//          ('If you decide you wish to use the audio recording feature of this app, please go to app settings and enable the microphone permission');
+      TPermissionStatus.PermanentlyDenied:
+        TDialogService.ShowMessage
+          ('If you decide you wish to use the audio recording feature of this app, please go to app settings and enable the microphone permission');
     end;
   end
   else

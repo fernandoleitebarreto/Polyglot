@@ -15,7 +15,8 @@ uses
   FMX.Dialogs, FMX.Forms, uClassUser, uClassCountry, uClassTexts, cParametro,
   uEnum, uEnum.Helper, uClassFunctions, uClassSendEmail, uConsulta, uFunctions,
   uRESTDWBasic, uRESTDWParams, FireDAC.VCLUI.Wait, DataSetConverter4D,
-  DataSetConverter4D.Impl, uClassSendCode, UnitConstante, uRESTDWIdBase;
+  DataSetConverter4D.Impl, uClassSendCode, UnitConstante, uRESTDWIdBase,
+  uRESTDWComponentBase;
 
 type
   Tdm = class(TServerMethodDataModule)
@@ -27,78 +28,78 @@ type
     RESTServicePooler: TRESTDWIdServicePooler;
     function FText(ANativeLanguage: TNativeLanguage): IText;
     procedure DWEventsEventshoraReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
-    procedure DWEventsEventsConfiguracaoReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+      var Result: string);
+    procedure DWEventsEventsCarregaDadosReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
-    procedure DWEventsEventsValidaLoginReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
-      const RequestType: TRequestType; var StatusCode: Integer;
-      RequestHeader: TStringList);
-    procedure DWEventsEventsCriarContaReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
-      const RequestType: TRequestType; var StatusCode: Integer;
-      RequestHeader: TStringList);
-    procedure DWEventsEventsListarCategoriaReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
-      const RequestType: TRequestType; var StatusCode: Integer;
-      RequestHeader: TStringList);
-    procedure DWEventsEventsListarRankingReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
-      const RequestType: TRequestType; var StatusCode: Integer;
-      RequestHeader: TStringList);
-    procedure DWEventsEventsCarregaDadosReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+    procedure DWEventsEventsRandomDadosReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
     procedure DWEventsEventsSearchReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
-    procedure DWEventsEventsSendEmailRecoverPasswordReplyEvent(
-      var Params: TRESTDWParams; const Result: TStringList);
-    procedure DWEventsEventsSendEmailCreateAccountReplyEvent(
-      var Params: TRESTDWParams; const Result: TStringList);
-    procedure DWEventsEventsSendSMSRecoverPasswordReplyEvent(
-      var Params: TRESTDWParams; const Result: TStringList);
-    procedure DWEventsEventsSendSMSCreateAccountReplyEvent(
-      var Params: TRESTDWParams; const Result: TStringList);
+      var Result: string);
+    procedure DWEventsEventsSendEmailRecoverPasswordReplyEvent
+      (var Params: TRESTDWParams; var Result: string);
+    procedure DWEventsEventsSendEmailCreateAccountReplyEvent
+      (var Params: TRESTDWParams; var Result: string);
     procedure DWEventsEventsVerifyCodeReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
+      var Result: string);
     procedure DWEventsEventsSaveNewPasswordReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
-    procedure DWEventsEventsAddWordReplyEventByType(var Params: TRESTDWParams;
-      const Result: TStringList; const RequestType: TRequestType;
-      var StatusCode: Integer; RequestHeader: TStringList);
+      var Result: string);
+    procedure DWEventsEventsSendSMSRecoverPasswordReplyEvent
+      (var Params: TRESTDWParams; var Result: string);
+    procedure DWEventsEventsWordsWithNoAudioReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
+      const RequestType: TRequestType; var StatusCode: Integer;
+      RequestHeader: TStringList);
     procedure DWEventsEventsAddAudioReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
-    procedure DWEventsEventsWordsWithNoAudioReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+      var Result: string);
+    procedure DWEventsEventsMeaningProximoReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
-    procedure DWEventsEventsMeaningProximoReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+    procedure DWEventsEventsSetNativeLanguageReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
-    procedure DWEventsEventsSetNativeLanguageReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
-      const RequestType: TRequestType; var StatusCode: Integer;
-      RequestHeader: TStringList);
-    procedure DWEventsEventsGetNativeLanguageReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+    procedure DWEventsEventsGetNativeLanguageReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
     procedure DWEventsEventsLoginFacebookReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
-    procedure DWEventsEventsRandomDadosReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+      var Result: string);
+    procedure DWEventsEventsUpdateUserReplyEvent(var Params: TRESTDWParams;
+      var Result: string);
+    procedure DWEventsEventsValidaLoginReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
-    procedure DWEventsEventsUpdateUserReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
+    procedure DWEventsEventsCriarContaReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
+      const RequestType: TRequestType; var StatusCode: Integer;
+      RequestHeader: TStringList);
+    procedure DWEventsEventsConfiguracaoReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
+      const RequestType: TRequestType; var StatusCode: Integer;
+      RequestHeader: TStringList);
+    procedure DWEventsEventsAddWordReplyEventByType(var Params: TRESTDWParams;
+      var Result: string; const RequestType: TRequestType;
+      var StatusCode: Integer; RequestHeader: TStringList);
+    procedure DWEventsEventsListarCategoriaReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
+      const RequestType: TRequestType; var StatusCode: Integer;
+      RequestHeader: TStringList);
+    procedure DWEventsEventsListarRankingReplyEventByType
+      (var Params: TRESTDWParams; var Result: string;
+      const RequestType: TRequestType; var StatusCode: Integer;
+      RequestHeader: TStringList);
+    procedure DWEventsEventsSendSMSCreateAccountReplyEvent
+      (var Params: TRESTDWParams; var Result: string);
     procedure DWEventsEventsDeleteAccountReplyEvent(var Params: TRESTDWParams;
-      const Result: TStringList);
+      var Result: string);
     procedure DWEventsEventsListarParametroReplyEventByType(
-      var Params: TRESTDWParams; const Result: TStringList;
+      var Params: TRESTDWParams; var Result: string;
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
   private
@@ -193,8 +194,8 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsAddWordReplyEventByType(var Params: TRESTDWParams;
-  const Result: TStringList; const RequestType: TRequestType;
-  var StatusCode: Integer; RequestHeader: TStringList);
+  var Result: string; const RequestType: TRequestType; var StatusCode: Integer;
+  RequestHeader: TStringList);
 var
   JSON: TJsonObject;
   words: IPolyglot;
@@ -249,7 +250,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -257,8 +258,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsCriarContaReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsCriarContaReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -366,7 +367,7 @@ begin
       end;
     end;
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -378,7 +379,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsDeleteAccountReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -413,7 +414,7 @@ begin
       end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -423,8 +424,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsCarregaDadosReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsCarregaDadosReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -436,19 +437,19 @@ begin
     try
       if not Params.ItemsString['native_language'].AsString.IsEmpty then
       begin
-        Result.Add(TPolyglot.New(dm.conn)
+        Result := TPolyglot.New(dm.conn)
           .CarregaDados(Params.ItemsString['Id_Usuario'].AsInteger,
           Params.ItemsString['subcategory'].AsInteger,
           Params.ItemsString['field_subcategory'].AsString,
           TNativeLanguage.Parse_Value(Params.ItemsString['native_language']
           .AsInteger), TGameForms.Parse_Value(Params.ItemsString['Form']
-          .AsString)));
+          .AsString));
       end
       else
       begin
-        Result.Add(TPolyglot.New(dm.conn)
+        Result := TPolyglot.New(dm.conn)
           .RandomDados(Params.ItemsString['subcategory'].AsInteger,
-          Params.ItemsString['field_subcategory'].AsString));
+          Params.ItemsString['field_subcategory'].AsString);
       end;
 
     except
@@ -457,7 +458,7 @@ begin
         StatusCode := 400;
         JSON.AddPair('sucesso', 'N');
         JSON.AddPair('erro', E.Message);
-        Result.Add(JSON.ToJSON);
+        Result := JSON.ToJSON;
       end;
     end;
   finally
@@ -467,68 +468,20 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsConfiguracaoReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
-  const RequestType: TRequestType; var StatusCode: Integer;
-  RequestHeader: TStringList);
-var
-  erro: string;
-  Param: TFunctionParametro;
-  JSON: TJsonObject;
-begin
-  JSON := TJsonObject.Create;
-  Param := TFunctionParametro.Create(dm.conn);
-  StatusCode := 200;
-
-  try
-    try
-      if NOT Param.getVersion(erro) then
-      begin
-        JSON.AddPair('sucesso', 'N');
-        JSON.AddPair('erro', erro);
-        JSON.AddPair('versao', '');
-        JSON.AddPair('developer', '');
-      end
-      else
-      begin
-        JSON.AddPair('sucesso', 'S');
-        JSON.AddPair('erro', '');
-        JSON.AddPair('versao', Param.Version);
-        JSON.AddPair('developer', Param.Developer);
-      end;
-
-    except
-      on E: Exception do
-      begin
-        StatusCode := 400;
-        JSON.AddPair('sucesso', 'N');
-        JSON.AddPair('erro', E.Message);
-        JSON.AddPair('versao', '');
-        JSON.AddPair('developer', '');
-      end;
-    end;
-  finally
-    Result.Add(JSON.ToJSON);
-
-    if Assigned(JSON) then
-      JSON.DisposeOf;
-  end;
-end;
-
-procedure Tdm.DWEventsEventsRandomDadosReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsRandomDadosReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 begin
   if RequestType = TRequestType.rtGet then
-    Result.Add(TPolyglot.New(dm.conn)
+    Result := TPolyglot.New(dm.conn)
       .RandomDados(Params.ItemsString['subcategory'].AsInteger,
-      Params.ItemsString['field_subcategory'].AsString));
+      Params.ItemsString['field_subcategory'].AsString);
 
 end;
 
 procedure Tdm.DWEventsEventsLoginFacebookReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -551,7 +504,7 @@ begin
         .getErrorLoginFacebook);
       JSON.AddPair('native_language', '0');
       JSON.AddPair('Id_Usuario', '0');
-      Result.Add(JSON.ToJSON);
+      Result := JSON.ToJSON;
 
       exit;
     end;
@@ -584,7 +537,7 @@ begin
     end; // if usuario.EmailValido(erro) then
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -593,8 +546,8 @@ begin
   end;
 end;
 
-procedure Tdm.DWEventsEventsGetNativeLanguageReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsGetNativeLanguageReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -625,7 +578,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -635,13 +588,13 @@ begin
 end;
 
 procedure Tdm.DWEventsEventshoraReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 begin
-  Result.Add('{"hora": "' + FormatDateTime('hh:nn:ss', now) + '"}');
+  Result := '{"hora": "' + FormatDateTime('hh:nn:ss', now) + '"}';
 end;
 
-procedure Tdm.DWEventsEventsListarCategoriaReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsListarCategoriaReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -666,7 +619,7 @@ begin
       JSON.AddPair('sucesso', 'N');
       JSON.AddPair('erro', FText(usuario.User.NativeLanguage)
         .getTextInvalidUserCode);
-      Result.Add(JSON.ToJSON);
+      Result := JSON.ToJSON;
     end
     else
     begin
@@ -724,7 +677,7 @@ begin
       qry.ParamByName('ID_USUARIO').AsInteger := usuario.User.Id_Usuario;
 
       qry.Active := True;
-      Result.Add(TConverter.New.DataSet(qry).AsJSONArray.ToJSON);
+      Result := TConverter.New.DataSet(qry).AsJSONArray.ToJSON;
 
     end;
   finally
@@ -740,12 +693,13 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsListarParametroReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+  var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
   qry: TFDQuery;
 begin
+  Result := '[]';
   qry := TConsulta.New(dm.conn).FactoryFDQueryReadOnly;
 
   try
@@ -754,9 +708,9 @@ begin
     qry.SQL.Add('FROM PARAMETRO');
     qry.Active := True;
     if NOT qry.IsEmpty then
-      Result.Add(TConverter.New.DataSet(qry).AsJSONObject.ToJSON)
-    else
-      Result.Add('[]');
+    begin
+      Result := TConverter.New.DataSet(qry).AsJSONObject.ToJSON;
+    end;
   finally
     if Assigned(qry) then
       qry.DisposeOf;
@@ -764,14 +718,15 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsListarRankingReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsListarRankingReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
   qry: TFDQuery;
   JSON: TJsonObject;
 begin
+  Result := '[]';
   qry := TConsulta.New(dm.conn).FactoryFDQueryReadOnly;
 
   JSON := TJsonObject.Create;
@@ -789,9 +744,9 @@ begin
 
     qry.Active := True;
     if NOT qry.IsEmpty then
-      Result.Add(TConverter.New.DataSet(qry).AsJSONArray.ToJSON)
-    else
-      Result.Add('[]');
+    begin
+      Result := TConverter.New.DataSet(qry).AsJSONArray.ToJSON;
+    end;
   finally
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -801,8 +756,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsMeaningProximoReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsMeaningProximoReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -892,7 +847,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -902,7 +857,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsSaveNewPasswordReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -974,7 +929,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -985,7 +940,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsSearchReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   qry: TFDQuery;
   pg_inicio, pg_fim: Integer;
@@ -1036,10 +991,8 @@ begin
     end;
 
     qry.Active := True;
-    if NOT qry.IsEmpty then
-      Result.Add(TConverter.New.DataSet(qry).AsJSONArray.ToJSON)
-    else
-      Result.Add('[]');
+    Result := TConverter.New.DataSet(qry).AsJSONArray.ToJSON;
+
   finally
     if Assigned(qry) then
       qry.DisposeOf;
@@ -1047,8 +1000,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsSendEmailCreateAccountReplyEvent(
-  var Params: TRESTDWParams; const Result: TStringList);
+procedure Tdm.DWEventsEventsSendEmailCreateAccountReplyEvent
+  (var Params: TRESTDWParams; var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -1079,7 +1032,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1088,8 +1041,8 @@ begin
   end;
 end;
 
-procedure Tdm.DWEventsEventsSendEmailRecoverPasswordReplyEvent(
-  var Params: TRESTDWParams; const Result: TStringList);
+procedure Tdm.DWEventsEventsSendEmailRecoverPasswordReplyEvent
+  (var Params: TRESTDWParams; var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -1117,7 +1070,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1126,8 +1079,8 @@ begin
   end;
 end;
 
-procedure Tdm.DWEventsEventsSendSMSCreateAccountReplyEvent(
-  var Params: TRESTDWParams; const Result: TStringList);
+procedure Tdm.DWEventsEventsSendSMSCreateAccountReplyEvent
+  (var Params: TRESTDWParams; var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -1159,7 +1112,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1168,8 +1121,8 @@ begin
   end;
 end;
 
-procedure Tdm.DWEventsEventsSendSMSRecoverPasswordReplyEvent(
-  var Params: TRESTDWParams; const Result: TStringList);
+procedure Tdm.DWEventsEventsSendSMSRecoverPasswordReplyEvent
+  (var Params: TRESTDWParams; var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -1199,7 +1152,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1209,8 +1162,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsSetNativeLanguageReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsSetNativeLanguageReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -1258,7 +1211,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(usuario) then
       usuario.DisposeOf;
@@ -1269,8 +1222,8 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsValidaLoginReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsValidaLoginReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 var
@@ -1343,7 +1296,7 @@ begin
       end;
     end;
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1353,7 +1306,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsVerifyCodeReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   code, erro: string;
   usuario: TFunctionUsuario;
@@ -1403,7 +1356,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1413,15 +1366,15 @@ begin
 
 end;
 
-procedure Tdm.DWEventsEventsWordsWithNoAudioReplyEventByType(
-  var Params: TRESTDWParams; const Result: TStringList;
+procedure Tdm.DWEventsEventsWordsWithNoAudioReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
   const RequestType: TRequestType; var StatusCode: Integer;
   RequestHeader: TStringList);
 begin
   if RequestType = TRequestType.rtGet then
-    Result.Add(TPolyglot.New(dm.conn).WordsWithNoAudio
+    Result := TPolyglot.New(dm.conn).WordsWithNoAudio
       (Params.ItemsString['field'].AsString, Params.ItemsString['category']
-      .AsInteger));
+      .AsInteger);
 end;
 
 function Tdm.FText(ANativeLanguage: TNativeLanguage): IText;
@@ -1430,7 +1383,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsAddAudioReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   JSON: TJsonObject;
   words: IPolyglot;
@@ -1458,7 +1411,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1467,7 +1420,7 @@ begin
 end;
 
 procedure Tdm.DWEventsEventsUpdateUserReplyEvent(var Params: TRESTDWParams;
-  const Result: TStringList);
+  var Result: string);
 var
   erro: string;
   usuario: TFunctionUsuario;
@@ -1491,7 +1444,7 @@ begin
     begin
       JSON.AddPair('sucesso', 'N');
       JSON.AddPair('erro', 'Informe todos os parâmetros');
-      Result.Add(JSON.ToJSON);
+      Result := JSON.ToJSON;
 
       exit;
     end;
@@ -1511,7 +1464,7 @@ begin
     end;
 
   finally
-    Result.Add(JSON.ToJSON);
+    Result := JSON.ToJSON;
 
     if Assigned(JSON) then
       JSON.DisposeOf;
@@ -1521,6 +1474,55 @@ begin
 
     if Assigned(usuario) then
       usuario.DisposeOf;
+  end;
+
+end;
+
+procedure Tdm.DWEventsEventsConfiguracaoReplyEventByType
+  (var Params: TRESTDWParams; var Result: string;
+  const RequestType: TRequestType; var StatusCode: Integer;
+  RequestHeader: TStringList);
+var
+  erro: string;
+  Param: TFunctionParametro;
+  JSON: TJsonObject;
+begin
+  JSON := TJsonObject.Create;
+  Param := TFunctionParametro.Create(dm.conn);
+  StatusCode := 200;
+
+  try
+    try
+      if NOT Param.getVersion(erro) then
+      begin
+        JSON.AddPair('sucesso', 'N');
+        JSON.AddPair('erro', erro);
+        JSON.AddPair('versao', '');
+        JSON.AddPair('developer', '');
+      end
+      else
+      begin
+        JSON.AddPair('sucesso', 'S');
+        JSON.AddPair('erro', '');
+        JSON.AddPair('versao', Param.Version);
+        JSON.AddPair('developer', Param.Developer);
+      end;
+
+    except
+      on E: Exception do
+      begin
+        StatusCode := 400;
+        JSON.AddPair('sucesso', 'N');
+        JSON.AddPair('erro', E.Message);
+        JSON.AddPair('versao', '');
+        JSON.AddPair('developer', '');
+      end;
+    end;
+  finally
+    Result := JSON.ToJSON;
+
+    if Assigned(JSON) then
+      JSON.DisposeOf;
   end;
 
 end;

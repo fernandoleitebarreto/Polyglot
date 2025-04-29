@@ -13,8 +13,8 @@ uses
   u99Permissions, uFunctions, UnitPadrao,
   uEnum, uEnum.Helper, uClassMeaning, uClassMeaning.Intf,
   uClassTexts, uClassSendCode, uClassCountry, FMX.MediaLibrary.Actions,
-  System.Actions, FMX.ActnList, FMX.StdActns, FMX.Skia, Skia, FMX.Memo.Types,
-  FMX.ScrollBox, FMX.Memo, FMX.MediaLibrary;
+  System.Actions, FMX.ActnList, FMX.StdActns, Skia.FMX, Skia, FMX.Memo.Types,
+  FMX.ScrollBox, FMX.Memo;
 
 type
 
@@ -104,9 +104,11 @@ type
     Img_ShowConfirmPassword: TImage;
     lbl_ConfirmPassword: TLabel;
     Rect_PrivacyPolicyText: TRectangle;
-    mmPrivacyPolicy: TMemo;
     Rect_TermsAndConditions: TRectangle;
-    mmTermsAndConditions: TMemo;
+    lbl_TermsAndConditionsText: TLabel;
+    vsb_TermsAndConditions: TVertScrollBox;
+    vsb_PrivacyPolicy: TVertScrollBox;
+    lbl_PrivacyPolicyText: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure img_BackClick(Sender: TObject);
@@ -441,8 +443,8 @@ begin
   edt_perfil_phone.Text := Copy(FMeaning.User.Telefone, Length(PhoneCode) + 1,
     Length(FMeaning.User.Telefone)).Trim;
 
-  mmTermsAndConditions.Lines.Text := FMeaning.TermsAndConditions;
-  mmPrivacyPolicy.Lines.Text := FMeaning.PrivacyPolicy;
+  lbl_TermsAndConditionsText.Text := FMeaning.TermsAndConditions;
+  lbl_PrivacyPolicyText.Text := FMeaning.PrivacyPolicy;
 
   if FMeaning.User.Foto <> '' then
   begin
@@ -681,6 +683,7 @@ begin
           raise Exception.Create('Error loading image');
 
         Img_Perfil_Back.Bitmap.Assign(Bitmap);
+        ActPhotoDidFinishTaking(Bitmap);
       end;
     except
       on E: Exception do

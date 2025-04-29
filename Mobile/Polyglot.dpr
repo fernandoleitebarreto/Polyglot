@@ -6,7 +6,7 @@ uses
   {$ENDIF EurekaLog}
   System.StartUpCopy,
   FMX.Forms,
-  FMX.Skia,
+  Skia.FMX,
   FMX.Types,
   u99Permissions in 'Units\u99Permissions.pas',
   uMD5 in 'Units\uMD5.pas',
@@ -79,9 +79,8 @@ uses
 
 
 begin
+  GlobalUseSkiaRasterWhenAvailable := True;
   GlobalUseSkia := True;
-  GlobalUseSkiaRasterWhenAvailable := False;
-  GlobalUseVulkan := True;
 {$IFDEF DEBUG}
   ReportMemoryLeaksOnShutdown := True;
 {$ENDIF}

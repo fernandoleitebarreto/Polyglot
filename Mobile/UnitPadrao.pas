@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants, FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics,
-  FMX.Dialogs, System.ImageList, FMX.ImgList, GoogleAnalyticsGlobal, FMX.Skia,
+  FMX.Dialogs, System.ImageList, FMX.ImgList, GoogleAnalyticsGlobal, Skia.FMX,
   FMX.Objects, FMX.Edit, FMX.ListBox, FMX.StdCtrls, FMX.TabControl,
   FMX.Ani, uEnum, uEnum.Helper, Skia, FMX.Controls.Presentation, FMX.Layouts,
   UnitConstante;
